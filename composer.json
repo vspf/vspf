@@ -1,0 +1,21 @@
+{
+    "name": "vspf/vspf",
+    "description": "VSPF PHP Framework",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["framework"],
+    "autoload": {
+        "psr-4": {
+            "Vspf\\Core\\": "core"
+        }
+    },
+    "authors": [
+        {
+            "name": "Davide Franco",
+            "email": "dfranco@dflc.ch"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    }
+}
