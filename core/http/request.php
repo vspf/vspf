@@ -32,8 +32,6 @@ class Request
         } else {
             return !is_null($default) ? $default : null;
         }
-
-        return null;
     }
         
     /**
