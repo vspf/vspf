@@ -1,6 +1,6 @@
 {
     "name": "vspf/vspf",
-    "description": "VSPF PHP Framework",
+    "description": "Vspf PHP Framework",
     "type": "library",
     "license": "MIT",
     "keywords": ["framework"],
@@ -11,8 +11,7 @@
     },
     "authors": [
         {
-            "name": "Davide Franco",
-            "email": "dfranco@dflc.ch"
+            "name": "Davide Franco"
         }
     ],
     "require": {
