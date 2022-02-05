@@ -6,6 +6,9 @@ class Singleton
 {
     protected static $instances = [];
 
+    /**
+     * @return mixed|static
+     */
     public static function getInstance()
     {
         $className = static::class;
