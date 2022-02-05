@@ -4,8 +4,9 @@ namespace Vspf\Core\Http;
 
 class Request
 {
+    private $method;
     private $parameters = [];
-    
+
     /**
      * __construct
      *
@@ -15,8 +16,10 @@ class Request
     {
         $this->parameters['GET'] = $_GET;
         $this->parameters['POST'] = $_POST;
+
+        $this->method = $_SERVER['REQUEST_METHOD'];
     }
-            
+
     /**
      * getParameter
      *
@@ -33,7 +36,7 @@ class Request
             return !is_null($default) ? $default : null;
         }
     }
-        
+
     /**
      * getInt
      *
@@ -45,7 +48,7 @@ class Request
     {
         return filter_var($this->getParameter($method, $parameter), FILTER_VALIDATE_INT) ? $this->getParameter($method, $parameter) : null;
     }
-        
+
     /**
      * getBoolean
      *
@@ -57,7 +60,7 @@ class Request
     {
         return filter_var($this->parameters[$method][$parameter], FILTER_VALIDATE_BOOLEAN);
     }
-    
+
     /**
      * getEmail
      *
@@ -69,4 +72,30 @@ class Request
     {
         return filter_var($this->getParameter($method, $parameter), FILTER_VALIDATE_EMAIL) ? $this->getParameter($method, $parameter) : null;
     }
+
+
+    /**
+     * @return string Request method like 'GET', 'HEAD', 'POST', 'PUT'
+     */
+    public function getMethod() : string
+    {
+        return $this->method;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isGet() : bool
+    {
+        return $this->method === 'GET';
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPost() : bool
+    {
+        return $this->method === 'POST';
+    }
+
 }
