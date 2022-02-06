@@ -6,7 +6,7 @@
     "keywords": ["framework"],
     "autoload": {
         "psr-4": {
-            "Vspf\\Core\\": "core"
+            "Core\\": "core"
         }
     },
     "authors": [
