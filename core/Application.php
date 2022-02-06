@@ -7,10 +7,9 @@ class Application extends Singleton
     private static $name = 'dummy-webapp';
     private static $settings;
 
-    public static function run() : string
+    public static function run()
     {
         self::$settings = ApplicationSettings::getInstance();
-        return "Application name: " . self::getName() . " of class " . __CLASS__ . " " . PHP_EOL;
     }
 
     public function getName()
