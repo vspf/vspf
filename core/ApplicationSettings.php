@@ -8,7 +8,6 @@ class ApplicationSettings extends Singleton
 
     public static function loadFromFile($filename)
     {
-        var_dump($filename);
         self::$settings = require($filename);
     }
 

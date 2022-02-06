@@ -1,6 +1,6 @@
 <?php
 
-namespace Vspf\Core\Http;
+namespace Core\Http;
 
 class Request
 {
