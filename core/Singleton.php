@@ -4,6 +4,9 @@ namespace Core;
 
 class Singleton
 {
+    /**
+     * @var array Singleton instances list
+     */
     protected static $instances = [];
 
     /**
